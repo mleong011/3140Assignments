@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset= "utf-8"/>
+    <title> NASA Picture Of The Day</title>
+  </head>
+
+  <body>
+    <style>
+    body{
+      background-color: #96817c;
+      font-family: "lucida grande";
+    }
+    </style>
+
+    <h1 style="text-align: center;">Welcome to NASA's Picture of the Day</h1>
+    </br></br>
+
+    <!--Title of APOD-->
+    <h3 style=" text-decoration: underline overline;">Title: {{info.pictitle}}</h3>
+
+    <!--Picture from APOD API-->
+    <img style="height: 400;" src="{{info.picurl}}" alt= "picture of the day">
+
+    <!--inverts photo-->
+    <style>
+    img:hover {
+      -webkit-transform:scaleX(-1);
+      transform: scaleX(-1);
+    }
+    </style>
+
+  </br>
+    <button><a href="{{info.hidefurl}}"> HD VERSION </a></button>
+
+    <ul>
+      <li>Date picture was taken: {{info.date}}</li>
+    </ul>
+
+    <p>More information about the photo: </br></br>
+        {{info.about}}</p>
+
+
+  </body>
+</html>
